@@ -32,25 +32,24 @@ app.use('/delete', deleteRoute);
 app.use('/edit', editRoute);
 app.use('/view', viewRoute);
 
-// // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+// catch 404 and forward to error handler
+app.use((req, res, next) => {
   let error = new Error('Not found');
 
   next(error);
 });
 
-// // error handler
-app.use(function(err, req, res, next) {
-  // render the error page
+// error handler
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
   // err.status - нет, сейчас всегда статус 500
   // статус добавляет пакет http-errors (кт не используется сейчас для генерации ошибок)
   // можно добавить его вручную
   // e.status = 404;
 
+  // render the error page
   res.render('error.njk', { error: err });
 });
-
 
 const main = async () => {
   await mongoose.connect('mongodb://localhost:27017/news-site')

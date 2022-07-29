@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.header {
+  background-color: white;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 5px 0 5px 65px;
+  font-size: 32px;
+  font-weight: bold;
+  background-image: url("/images/logo.svg");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.menu {
+}
+
+.menu__link {
+  display: inline-block;
+  width: auto;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(0, 116, 58);
+  transition: background-color 0.3s ease;
+}
+
+.menu__link:hover {
+  background-color: rgb(5, 148, 77);
+  cursor: pointer;
+}
+
+.main {
+  min-height: calc(100vh - 120px);
+}
+
+h1 span {
+  color: #666;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.control {
+  margin: 0 0 20px;
+}
+
+.control__input,
+.control__textarea {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.control__textarea {
+  min-height: 200px;
+  resize: none;
+}
+
+.control__button {
+  display: block;
+  width: auto;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(0, 116, 58);
+  transition: background-color 0.3s ease;
+}
+
+.control__button:hover {
+  background-color: rgb(5, 148, 77);
+  cursor: pointer;
+}
+
+.success {
+  margin: 0 0 20px;
+  padding: 3px 0 3px 30px;
+  color: rgb(0, 116, 58);
+  background-image: url("/images/success.svg");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.card {
+  margin: 0 0 10px;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.card__date {
+  margin: 0 0 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.card__title {
+  margin: 0 0 5px;
+}
+
+.card__title a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card__buttons a {
+  color: rgb(0, 116, 58);
+}
+
+.detail {
+}
+
+.detail__date {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.detail__title {
+  margin: 0 0 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.detail__content {
+  min-height: 200px;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 15px;
+  font-size: 12px;
+  color: #666;
+  background-color: white;
+}
+
+.ad {
+  margin: 50px 0 0;
+  padding: 30px;
+  border-radius: 3px;
+  text-align: center;
+  color: #ccc;
+  background-color: #f6f6f6;
+}
+
+.footer {
+  min-height: 80px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  background-color: #333;
+}

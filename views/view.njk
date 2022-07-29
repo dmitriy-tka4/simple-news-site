@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+  <h1>{{ title }}</h1>
+
+  <div class="detail">
+    <div class="detail__date">
+      {{ article.createdAt }}
+    </div>
+    <div class="detail__title">
+      {{ article.title }}
+    </div>
+    <div class="detail__content">
+      {{ article.content }}
+    </div>
+  </div>
+
+{% endblock %}

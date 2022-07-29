@@ -1,0 +1,15 @@
+# Default
+.idea
+.vscode
+
+# Node
+node_modules
+
+# Dist & test
+test
+
+# BD, logs
+*.log
+
+# Other
+npm-debug.log*

@@ -1,0 +1,24 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+  <h1>{{ title }}</h1>
+
+  {% if message %}
+  <div class="success">
+    {{ message }}
+  </div>
+  {% endif %}
+
+  <form action="/edit/{{ article._id }}" method="post">
+    <div class="control">
+      <input type="text" name="title" class="control__input" placeholder="Название" required value="{{ article.title }}">
+    </div>
+    <div class="control">
+      <textarea name="content" class="control__textarea" placeholder="Контент" required>{{ article.content | trim }}</textarea>
+    </div>
+    <div class="control">
+      <button type="submit" class="control__button">Сохранить</button>
+    </div>
+  </form>
+
+{% endblock %}

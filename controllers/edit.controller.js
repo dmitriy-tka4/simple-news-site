@@ -2,7 +2,9 @@ import Article from '../models/article.model.js';
 
 export async function get(req, res, next) {
   try {
-    let article = await Article.findById(req.params.id);
+    const { id } = req.params;
+
+    const article = await Article.findById(id);
 
     res.render('edit.njk', { article, title: 'Edit article' });
   } catch (e) {
@@ -16,11 +18,14 @@ export async function post(req, res, next) {
   }
 
   try {
+    const { id } = req.params;
+    const { title, content } = req.body;
+
     const article = await Article.findByIdAndUpdate(
-      req.params.id,
+      id,
       {
-        title: req.body.title,
-        content: req.body.content,
+        title,
+        content
       },
       { returnDocument: 'after' }
     );

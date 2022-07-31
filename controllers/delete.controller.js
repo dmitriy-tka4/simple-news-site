@@ -2,7 +2,9 @@ import Article from '../models/article.model.js';
 
 export async function deleteArticle(req, res, next) {
   try {
-    await Article.deleteOne({ _id: req.params.id });
+    const { id } = req.params;
+
+    await Article.deleteOne({ _id: id });
 
     res.status(204).redirect('/');
   } catch (e) {

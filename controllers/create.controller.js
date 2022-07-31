@@ -9,9 +9,11 @@ export async function post(req, res, next) {
     return res.sendStatus(400);
   }
 
+  const { title, content } = req.body;
+
   const article = new Article({
-    title: req.body.title,
-    content: req.body.content,
+    title,
+    content
   });
 
   try {

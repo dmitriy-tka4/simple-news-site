@@ -1,6 +1,7 @@
 {
   "name": "simple-news-site",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "description": "",
   "main": "app.js",

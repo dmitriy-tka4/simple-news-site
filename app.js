@@ -9,7 +9,7 @@ import deleteRoute from './routes/delete.route.js';
 import editRoute from './routes/edit.route.js';
 import viewRoute from './routes/view.route.js';
 
-const __filename = fileURLToPath(import.meta.url) ;
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
@@ -35,6 +35,8 @@ app.use('/view', viewRoute);
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   let error = new Error('Not found');
+
+  error.status = 404;
 
   next(error);
 });

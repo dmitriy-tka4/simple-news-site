@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 import * as deleteController from '../controllers/delete.controller.js'
 
 const router = Router();

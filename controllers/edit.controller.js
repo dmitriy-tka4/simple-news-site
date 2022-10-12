@@ -34,7 +34,6 @@ export async function post(req, res, next) {
 
     res.status(200).render('edit.njk', { article, message, title: 'Edit article' });
   } catch (e) {
-    // res.status(400).json(e);
     next(e);
   }
 }
